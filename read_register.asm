@@ -17,6 +17,9 @@ _start:
     sub rcx, 4 ;subtract 4 from rcx (our register length variable) and store the result in rcx. 4 bits would be one hexidecimal digit.
 
     sar rax, cl ;shift right. we shift right to set the right most 4 bits to the value to print in this loop iteration.
+    ; cl is a register, smallest part of rcx 
+    ; rax -- eax -- ax -- ah + al 
+    ; rcx -- ecx -- cx -- ch + cl
     and rax, 0xf ;and rax value with 0xf or 0b1111 so that the next heidecimal digit is isolated.
 
     lea rsi, [codes + rax] ;load the heidecimal digit to print into rsi.
