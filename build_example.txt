@@ -1,9 +1,11 @@
-> nasm -felf64 hello.asm -o hello.o 
+commands in these examples are run from the root of the repository
+
+> nasm -felf64 ch02_hello.asm -o hello.o 
 > ld -o hello hello.o 
 > chmod u+x hello
 
 Zhirkov, Igor. Low-Level Programming (p. 70). Apress. Kindle Edition. 
 
-nasm -felf64 hello.asm -o ./build/hello.o 
+nasm -felf64 ch02_hello.asm -o ./build/hello.o 
 ld -o ./build/hello ./build/hello.o 
 chmod u+x ./build/hello
