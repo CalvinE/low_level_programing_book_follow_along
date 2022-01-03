@@ -3,3 +3,7 @@
 > chmod u+x hello
 
 Zhirkov, Igor. Low-Level Programming (p. 70). Apress. Kindle Edition. 
+
+nasm -felf64 hello.asm -o ./build/hello.o 
+ld -o ./build/hello ./build/hello.o 
+chmod u+x ./build/hello
