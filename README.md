@@ -12,3 +12,7 @@ chmod u+x ./build/hello # only if necessary
 
 * A linux machine, virtual machine, or a WSL instance if on windows (I use Ubuntu)
 * `NASM`, `make`, `gcc`, `gdb`, and a text editor (I am using `VS Code`, or `vim` if I am feeling frisky)
+
+## Install dependencies
+
+`sudo apt update && sudo apt install -y nasm make gcc gdb`
