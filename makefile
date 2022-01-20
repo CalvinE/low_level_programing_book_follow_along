@@ -1,7 +1,7 @@
 NASMFLAGS = -felf64
 BUILDDIR = ./build/
 
-all: ch02_hello ch02_read_register
+all: ch02_hello ch02_read_register ch02_print_call
 
 clean:
 	rm -rf $(BUILDDIR)
