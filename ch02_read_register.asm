@@ -22,12 +22,12 @@ _start:
     ; rcx -- ecx -- cx -- ch + cl
     and rax, 0xf ;and rax value with 0xf or 0b1111 so that the next heidecimal digit is isolated.
 
-    lea rsi, [codes + rax] ;load the heidecimal digit to print into rsi.
+    lea rsi, [codes + rax] ;load the hexidecimal digit to print into rsi.
     ;this is done by adding the codes address to the isolated hex digit. this gives us the single char that is the text representation of the hex digit.
     mov rax, 1 ;moving 1 into rax to do a write sys call.
 
     push rcx ;pushing rcx to stack to save value.
-    syscall ; write call to print current hex digit to given file descriptor.
+    syscall ;write call to print current hex digit to given file descriptor. syscall changes rcx and r11
     pop rcx ;restore value of rcx from stack.
 
     pop rax ;restore value of rax from the stack.

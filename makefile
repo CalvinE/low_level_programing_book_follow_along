@@ -15,3 +15,7 @@ ch02_hello:
 ch02_read_register:
 	nasm $(NASMFLAGS) ch02_read_register.asm -o ${BUILDDIR}ch02_read_register.o 
 	ld -o ${BUILDDIR}ch02_read_register ${BUILDDIR}ch02_read_register.o 
+
+ch02_print_call:
+	nasm $(NASMFLAGS) ch02_print_call.asm -o ${BUILDDIR}ch02_print_call.o 
+	ld -o ${BUILDDIR}ch02_print_call ${BUILDDIR}ch02_print_call.o 
