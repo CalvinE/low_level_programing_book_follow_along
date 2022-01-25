@@ -6,7 +6,7 @@ test_string: db "abcdefghijklmnopqrstuvwxyz",0
 
 section .text
 
-strlen: ; adhearing to convention rdi is our first and only parameter
+strlen: ;adhearing to convention rdi is our first and only parameter
     xor rax, rax ;make sure rax is zeroed out because its the index we are using to loop over the string
 .loop:
     cmp byte[rdi+rax], 0 ;check if the current index of the string is the null terminator
@@ -16,7 +16,7 @@ strlen: ; adhearing to convention rdi is our first and only parameter
                          ;and we need to evaluate one
                          ;byte at a time to check for the null terminator.
     je .end ;Jump to the end if we found the null terminator
-    inc rax ; otherwise increment rax and jump to loop again
+    inc rax ;otherwise increment rax and jump to loop again
     jmp .loop
 .end:
     ret
